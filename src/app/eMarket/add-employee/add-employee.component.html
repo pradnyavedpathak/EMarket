@@ -1,0 +1,204 @@
+<form [formGroup]="addemployeeForm" (ngSubmit)="onSubmit()" class="Form-horizontal">
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add Employee</h3>
+            </div>
+
+            <div class="panel-body">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" for="First_Name">First Name</label>
+                                <div class="col-sm-8">
+                                    <input id="First_Name" formControlName="First_Name" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" for="Last_Name">Last Name</label>
+                                <div class="col-sm-8">
+                                    <input id="Last_Name" formControlName="Last_Name" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><br /></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" for="Email">Email</label>
+                                <div class="col-sm-8">
+                                    <input id="Email" formControlName="Email" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" for="Phone_Number">Phone Number</label>
+                                <div class="col-sm-8">
+                                    <input id="Phone_Number" formControlName="Phone_Number" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><br /></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" for="Salary">Salary</label>
+                                <div class="col-sm-8">
+                                    <input id="Salary" formControlName="Salary" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td><br /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" for="Job_Id">Job Name</label>
+                                <div class="col-sm-8">
+                                    <select formControlName="Job_Id" class="form-control">
+                                        <option value="" selected>select job name</option>
+                                        <option value=0>No manager</option>
+                                        <option value=1>salesman</option>
+                                        <option value=2>store manager</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><br /></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" for="Dept_Id">Dept Name</label>
+                                <div class="col-sm-8">
+                                    <select formControlName="Dept_Id" class="form-control">
+                                        <option value="" selected>select dept name</option>
+                                        <option value=1>vegetables</option>
+                                        <option value=2>fruits</option>
+                                        <option value=3>pooja store</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><br /></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" for="Manager_Id">Manager</label>
+                                <div class="col-sm-8">
+                                    <select formControlName="Manager_Id" class="form-control">
+                                        <option value="" selected>select Manager</option>
+                                        <option [value]=employee.Emp_Id *ngFor="let employee of employees">{{employee.First_Name}}  {{employee.Last_Name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label" for="Shop_Name">Shop Type</label>
+                                <div class="col-sm-8">
+                                    <select formControlName="Shop_Name" class="form-control">
+                                        <option value="" selected>select Shop type</option>
+                                        <option *ngFor="let shop of shops" value="shop.Shop_Name">{{shop.Shop_Name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+            <div class="panel-footer">
+                <div class="btn-toolbar">
+                    <button class="btn btn-primary" type="submit">Add</button>
+                    <button class="btn btn-primary" type="button" (click)="onLoadEmployeedataClick()">Reset</button>
+                </div>
+            </div>
+        </div>
+        <br/>
+
+        <div class="table-responsive" style="width:80%">
+            <table class="table table-bordered" *ngIf="employees && employees.length">
+                <thead>
+                    <tr class="bg-primary">
+
+                        <th>First_Name</th>
+                        <th>Last_Name</th>
+                        <th>Email</th>
+                        <th>Phone_Number</th>
+                        <th>Salary</th>
+                        <th>Job_Id</th>
+                        <th>Dept_Id</th>
+                        <th>Manager_Id</th>
+                        <th>Shop_Id</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let employee of employees">
+
+                        <td>{{ employee.First_Name }}</td>
+                        <td>{{ employee.Last_Name }}</td>
+                        <td>{{ employee.Email }}</td>
+                        <td>{{ employee.Phone_Number }}</td>
+                        <td>{{ employee.Salary }}</td>
+                        <td>{{ employee.Job_Id }}</td>
+                        <td>{{ employee.Dept_Id }}</td>
+                        <td>{{ employee.Manager_Id }}</td>
+                        <td>{{ employee.Shop_Id }}</td>
+
+                    </tr>
+
+                    <tr *ngIf="!employees || employees.length==0">
+                        <td colspan="5">No employees to display</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>

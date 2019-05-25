@@ -1,0 +1,99 @@
+<p>
+  add-product works!
+</p>
+<form [formGroup]="addproductForm" (ngSubmit)="onSubmit()" class="Form-horizontal">
+  <div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Add Product</h3>
+    </div>
+
+    <div class="panel-body">
+      <table>
+        <tr>
+          <td>
+              <div class="form-group">
+                  <label class="col-sm-4 control-label" for="Product_Name">Product Name</label>
+                  <div class="col-sm-8">
+                    <input id="Product_Name" formControlName="Product_Name" type="text" class="form-control">
+                  </div>
+                </div>
+          </td>
+          <td>
+              <div class="form-group">
+                  <label class="col-sm-4 control-label" for="Product_Type">Product Type</label>
+                  <div class="col-sm-8">
+                    <select formControlName="Product_Type" class="form-control">
+                      <option value="" selected>select product type</option>
+                      <option *ngFor="let product of products" value="product.Product_Id">{{product.Product_Type}}</option>
+                    </select>
+                  </div>
+              </div>
+          </td>
+        </tr>
+        <tr><td><br/>
+        </td></tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="Product_TaxRate">Product TaxRate</label>
+                    <div class="col-sm-8">
+                      <input id="Product_TaxRate" formControlName="Product_TaxRate" type="text" class="form-control">
+                    </div>
+                  </div>
+            </td>
+          </tr>
+          <tr>
+            <td><br/></td>
+          </tr>
+          <tr>
+              <td>
+                  <div class="form-group">
+                      <label class="col-sm-4 control-label" for="Product_Price">Product Price</label>
+                      <div class="col-sm-8">
+                        <input id="Product_Price" formControlName="Product_Price" type="text" class="form-control">
+                      </div>
+                  </div>              
+              </td>
+          </tr>
+      </table>
+
+    </div>
+    <div class="panel-footer">
+      <div class="btn-toolbar">
+        <button class="btn btn-primary" type="submit">Add</button>
+        <button class="btn btn-primary" type="button" (click)="onLoadShopdataClick()">Reset</button>
+      </div>
+    </div>
+  </div>
+<br/>
+
+
+<div class="table-responsive" style="width:80%">
+    <table class="table table-bordered" *ngIf="products && products.length">
+        <thead>
+            <tr class="bg-primary">
+                
+                <th>Product_Name</th>
+                <th>Product Type</th>
+                <th>Product_TaxRate</th>
+                <th>Product_Price</th>
+                
+              </tr>
+            </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+
+              <td>{{ product.Product_Name }}</td>
+              <td>{{ product.Product_Type }}</td>
+              <td>{{ product.Product_TaxRate }}</td>
+              <td>{{ product.Product_Price }}</td>
+            </tr>
+            <tr *ngIf="!products || products.length==0">
+              <td colspan="5">No products to display</td>
+            </tr>
+          </tbody>
+    </table>
+</div>
+</div>
+</form>

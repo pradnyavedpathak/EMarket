@@ -1,0 +1,334 @@
+{ 
+  "employees": [
+    {
+      "id": 1,
+      "Emp_Id": 1,
+      "First_Name": "FN-1",
+      "Last_Name": "LN-1",
+      "Email": "fn_ln1@emarket.com",
+      "Phone_number": 1234566787,
+      "Salary": 11200,
+      "Job_Id": "salesman",
+      "Dept_Id": "vegetables",
+      "Manager_Id": 2,
+      "Shop_Id": 1
+    },
+    {
+      "id": 2,
+      "Emp_Id": 2,
+      "First_Name": "FN-3",
+      "Last_Name": "LN-3",
+      "Email": "fn_ln2@emarket.com",
+      "Phone_number": 8987653210,
+      "Salary": 12000,
+      "Job_Id": "salesman",
+      "Dept_Id": "vegetables",
+      "Manager_Id": 2,
+      "Shop_Id": 1
+    },
+    {
+      "id": 3,
+      "Emp_Id": 3,
+      "First_Name": "FN-3",
+      "Last_Name": "LN-3",
+      "Email": "fn_ln3@emarket.com",
+      "Phone_number": 2314567478,
+      "Salary": 12500,
+      "Job_Id": "store Manager",
+      "Dept_Id": "vegetables",
+      "Manager_Id": 0,
+      "Shop_Id": 1
+    },
+    {
+      "id": 4,
+      "Emp_Id": 4,
+      "First_Name": "FN-4",
+      "Last_Name": "LN-4",
+      "Email": "fn_ln4@emarket.com",
+      "Phone_number": 3214567654,
+      "Salary": 13000,
+      "Job_Id": "salesman",
+      "Dept_Id": "vegetables",
+      "Manager_Id": 2,
+      "Shop_Id": 2
+    },
+    {
+      "id": 5,
+      "Emp_Id": 5,
+      "First_Name": "FN-5",
+      "Last_Name": "LN-5",
+      "Email": "fn_ln5@emarket.com",
+      "Phone_number": 9343847837,
+      "Salary": 13500,
+      "Job_Id": "salesman",
+      "Dept_Id": "vegetables",
+      "Manager_Id": 2,
+      "Shop_Id": 2
+    },
+    {
+      "id": 6,
+      "Emp_Id": 6,
+      "First_Name": "FN-6",
+      "Last_Name": "LN-6",
+      "Email": "fn_ln6@emarket.com",
+      "Phone_number": 2823734973,
+      "Salary": 14000,
+      "Job_Id": "store manager",
+      "Dept_Id": "vegetables",
+      "Manager_Id": 0,
+      "Shop_Id": 2
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "Product_Id": 1,
+      "Product_Name": "Apple",
+      "Product_Type": "Kashmiri",
+      "Product_TaxRate": 4,
+      "Product_Price": 180
+    },
+    {
+      "Product_Id": 2,
+      "Product_Name": "pineapple",
+      "Product_Type": "big",
+      "Product_TaxRate": "10",
+      "Product_Price": "45",
+      "id": 2
+    },
+    {
+      "Product_Id": 3,
+      "Product_Name": "Tomato",
+      "Product_Type": "red",
+      "Product_TaxRate": "5",
+      "Product_Price": "40",
+      "id": 4
+    },
+    {
+      "Product_Id": 4,
+      "Product_Name": "Cucumber",
+      "Product_Type": "small",
+      "Product_TaxRate": "6",
+      "Product_Price": "10",
+      "id": 5
+    },
+    {
+      "Product_Id": 5,
+      "Product_Name": "Watermelon",
+      "Product_Type": "big",
+      "Product_TaxRate": "7",
+      "Product_Price": "90",
+      "id": 6
+    },
+    {
+      "Product_Id": 6,
+      "Product_Name": "carrot",
+      "Product_Type": "small",
+      "Product_TaxRate": "3",
+      "Product_Price": "30",
+      "id": 7
+    },
+    {
+      "Product_Id": 7,
+      "Product_Name": "mangoes",
+      "Product_Type": "small",
+      "Product_TaxRate": "5",
+      "Product_Price": "200",
+      "id": 8
+    }
+  ],
+  "shops": [
+    {
+      "id": 1,
+      "Shop_No": 1,
+      "Shop_Name": "aaa",
+      "Shop_Owner": "Owner1",
+      "Shop_Address": "Pune",
+      "Contacts": {
+        "Contact_Id": 1,
+        "Contact_Number1": 1111111111,
+        "Contact_Number2": 0
+      }
+    },
+    {
+      "id": 2,
+      "Shop_No": 2,
+      "Shop_Name": "bbb",
+      "Shop_Owner": "Owner2",
+      "Shop_Address": "Mumbai",
+      "Contacts": {
+        "Contact_Id": 2,
+        "Contact_Number1": 2222222222,
+        "Contact_Number2": 7777777777
+      }
+    },
+    {
+      "id": 3,
+      "Shop_No": 3,
+      "Shop_Name": "ccc",
+      "Shop_Owner": "Owner3",
+      "Shop_Address": "Hydrabad",
+      "Contacts": {
+        "Contact_Id": 3,
+        "Contact_Number1": 3333333333,
+        "Contact_Number2": 0
+      }
+    },
+    {
+      "id": 4,
+      "Shop_No": 4,
+      "Shop_Name": "ddd",
+      "Shop_Owner": "Owner4",
+      "Shop_Address": "Kolkata",
+      "Contacts": {
+        "Contact_Id": 4,
+        "Contact_Number1": 4444444444,
+        "Contact_Number2": 0
+      }
+    },
+    {
+      "id": 5,
+      "Shop_No": 5,
+      "Shop_Name": "eee",
+      "Shop_Owner": "Owner5",
+      "Shop_Address": "Delhi",
+      "Contacts": {
+        "Contact_Id": 2,
+        "Contact_Number1": 5555555555,
+        "Contact_Number2": 8888888888
+      }
+    },
+    {
+      "id": 6,
+      "Shop_No": 6,
+      "Shop_Name": "fff",
+      "Shop_Owner": "Owner6",
+      "Shop_Address": "Banglore",
+      "Contacts": {
+        "Contact_Id": 6,
+        "Contact_Number1": 6666666666,
+        "Contact_Number2": 0
+      }
+    },
+    {
+      "id": 7,
+      "Shop_No": 7,
+      "Shop_Name": "ggg",
+      "Shop_Owner": "Owner7",
+      "Shop_Address": "Pimple Saudagar",
+      "Contacts": {
+        "Contact_Id": 7,
+        "Contact_Number1": 9999999999,
+        "Contact_Number2": 0
+      }
+    },
+    {
+      "id": 8,
+      "Shop_No": 8,
+      "Shop_Name": "hhh",
+      "Shop_Owner": "Owner8",
+      "Shop_Address": "Murum",
+      "Contacts": {
+        "Contact_Id": 8,
+        "Contact_Number1": 1010101010,
+        "Contact_Number2": 0
+      }
+    },
+    {
+      "id": 9,
+      "Shop_No": 9,
+      "Shop_Name": "iii",
+      "Shop_Owner": "Owner9",
+      "Shop_Address": "Thane",
+      "Contacts": {
+        "Contact_Id": 9,
+        "Contact_Number1": 1212121212,
+        "Contact_Number2": 0
+      }
+    },
+    {
+      "id": 10,
+      "Shop_No": 10,
+      "Shop_Name": "jjj",
+      "Shop_Owner": "Owner10",
+      "Shop_Address": "USA",
+      "Contacts": {
+        "Contact_Id": 10,
+        "Contact_Number1": 1234567890,
+        "Contact_Number2": 0
+      }
+    },
+    {
+      "id": 11,
+      "Shop_No": 11,
+      "Shop_Name": "kkk",
+      "Shop_Owner": "Owner11",
+      "Shop_Address": "AAA11",
+      "Contacts": {
+        "Contact_Id": 11,
+        "Contact_Number1": 1231231231,
+        "Contact_Number2": 0
+      }
+    },
+    {
+      "id": 12,
+      "Shop_No": 12,
+      "Shop_Name": "Shop12",
+      "Shop_Owner": "Owner12",
+      "Shop_Address": "Address12",
+      "Contacts": {
+        "Contact_Id": 1,
+        "Contact_Number1": 1234123412,
+        "Contact_Number2": 0
+      }
+    },
+    {
+      "id": 13,
+      "Shop_No": 13,
+      "Shop_Name": "Shop13",
+      "Shop_Owner": "Owner13",
+      "Shop_Address": "Address13",
+      "Contacts": {
+        "Contact_Id": 1,
+        "Contact_Number1": 1234512345,
+        "Contact_Number2": 1234561234
+      }
+    },
+    {
+      "id": 14,
+      "Shop_No": 14,
+      "Shop_Name": "Shop14",
+      "Shop_Owner": "Owner14",
+      "Shop_Address": "Address14",
+      "Contacts": {
+        "Contact_Id": 1,
+        "Contact_Number1": 1234567123,
+        "Contact_Number2": 1234567812
+      }
+    },
+    {
+      "id": 15,
+      "Shop_No": 15,
+      "Shop_Name": "Shop15",
+      "Shop_Owner": "owner15",
+      "Shop_Address": "Address15",
+      "Contacts": {
+        "Contact_Id": 1,
+        "Contact_Number1": 1236541254,
+        "Contact_Number2": 0
+      }
+    },
+    {
+      "Shop_No": 18,
+      "Shop_Name": "shop16",
+      "Shop_Owner": "owner16",
+      "Shop_Address": "noida",
+      "Contacts": {
+        "Contact_Id": 1,
+        "Contact_Number1": 3849230943,
+        "Contact_Number2": 8376482794
+      },
+      "id": 16
+    }
+  ]
+}

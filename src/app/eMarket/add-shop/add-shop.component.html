@@ -1,0 +1,104 @@
+<form [formGroup]="addshopForm" (ngSubmit)="onSubmit()" class="Form-horizontal">
+  <div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title">Add Shop</h3>
+    </div>
+
+    <div class="panel-body">
+      <table>
+        <tr>
+          <td>
+              <div class="form-group">
+                  <label class="col-sm-4 control-label" for="Shop_Name">Shop Name</label>
+                  <div class="col-sm-8">
+                    <input id="Shop_Name" formControlName="Shop_Name" type="text" class="form-control">
+                  </div>
+                </div>
+          </td>
+          <td>
+              <div class="form-group">
+                  <label class="col-sm-4 control-label" for="Shop_Owner">Shop Owner</label>
+                  <div class="col-sm-8">
+                    <input id="Shop_Owner" formControlName="Shop_Owner" type="text" class="form-control">
+                  </div>
+              </div>
+          </td>
+        </tr>
+        <tr><td><br/>
+        </td></tr>
+        <tr>
+            <td>
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="Shop_Address">Shop Address</label>
+                    <div class="col-sm-8">
+                      <input id="Shop_Address" formControlName="Shop_Address" type="text" class="form-control">
+                    </div>
+                  </div>
+            </td>
+          </tr>
+          <tr>
+            <td><br/></td>
+          </tr>
+          <tr>
+              <td>
+                  <div class="form-group">
+                      <label class="col-sm-4 control-label" for="Contact_Number1">Contact Number1</label>
+                      <div class="col-sm-8">
+                        <input id="Contact_Number1" formControlName="Contact_Number1" type="text" class="form-control">
+                      </div>
+                  </div>              
+              </td>
+              <td>
+                  <div class="form-group">
+                      <label class="col-sm-4 control-label" for="Contact_Number2">Contact Number2</label>
+                      <div class="col-sm-8">
+                        <input id="Contact_Number2" formControlName="Contact_Number2" type="text" class="form-control">
+                      </div>
+                    </div>
+              </td>
+            </tr>
+      </table>
+
+    </div>
+    <div class="panel-footer">
+      <div class="btn-toolbar">
+        <button class="btn btn-primary" type="submit">Add</button>
+        <button class="btn btn-primary" type="button" (click)="onLoadShopdataClick()">Reset</button>
+      </div>
+    </div>
+  </div>
+<br/>
+
+
+<div class="table-responsive" style="width:80%">
+    <table class="table table-bordered" *ngIf="shops && shops.length">
+        <thead>
+            <tr class="bg-primary">
+                
+                <th>Shop Name</th>
+                <th>Shop Owner</th>
+                <th>Shop Address</th>
+                <th>Contact Number1</th>
+                <th>Contact Number2</th>
+                
+              </tr>
+            </thead>
+          <tbody>
+            <tr *ngFor="let shop of shops">
+
+              <td>{{ shop.Shop_Name }}</td>
+              <td>{{ shop.Shop_Owner }}</td>
+              <td>{{ shop.Shop_Address }}</td>
+              <td>{{ shop.Contacts.Contact_Number1 }}</td>
+              <td>{{ shop.Contacts.Contact_Number2 }}</td>
+            </tr>
+            <tr *ngIf="!shops || shops.length==0">
+              <td colspan="5">No shops to display</td>
+            </tr>
+          </tbody>
+    </table>
+</div>
+</div>
+</form>
+
